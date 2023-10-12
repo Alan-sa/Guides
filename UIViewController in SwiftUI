@@ -1,0 +1,52 @@
+How to use a UIViewController in SwiftUI
+
+1. Create a UIViewControllerRepresentable to Use UIViewController:
+If you need to create a UIViewController instance and pass it to some library, you can make a UIViewControllerRepresentable class.
+
+import SwiftUI
+
+struct MyUIViewController: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        // Create your UIViewController instance here
+        let viewController = UIViewController()
+        // Further configure your view controller if needed
+        return viewController
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        // Update your view controller here if needed
+    }
+}
+
+2. Access Parent UIViewController from SwiftUI View:
+If you need to access the parent UIViewController of your SwiftUI view, you may use UIViewControllerRepresentable or define an @EnvironmentObject to hold your UIViewController.
+
+Here’s a sample using @EnvironmentObject:
+
+First, you need to define an environment object:
+
+class HostingControllerReference: ObservableObject {
+    weak var controller: UIViewController?
+}
+
+Then you need to assign the UIHostingController to this environment object when you initialize it:
+
+let hostingController = UIHostingController(rootView: YourSwiftUIView())
+let reference = HostingControllerReference()
+reference.controller = hostingController
+hostingController.rootView.environmentObject(reference)
+
+In your SwiftUI view, you can now access this reference:
+
+struct YourSwiftUIView: View {
+    @EnvironmentObject var controllerReference: HostingControllerReference
+    
+    var body: some View {
+        // Your SwiftUI content here
+        // You can access controllerReference.controller to get your UIViewController
+    }
+}
+
+Combining Both Approaches:
+Depending on your needs, you might need to combine both approaches to create a UIViewController and also get a reference to the parent UIViewController. The specific integration depends on your app's structure and the library's requirements.
