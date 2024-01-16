@@ -1,0 +1,36 @@
+
+Amazon Lex is a service for building conversational interfaces into any application using voice and text. 
+Amazon Lex provides the advanced deep learning functionalities of automatic speech recognition for converting speech to text and natural language understanding to recognize the intent of the text. 
+This enables you to build applications with highly engaging user experiences and lifelike conversational interactions with Amazon Lex. 
+The same deep learning technologies that power Amazon Alexa are now available to any developer enabling you to build sophisticated natural language conversational bots or chat bots which I will talk more about next to create a bot. 
+You will first define the actions performed by the bar. 
+These actions are the intents that need to be fulfilled by the bar. 
+For each intent, you will add sample utterances and slots, utterances are phrases that invoke the intent. Slots are input data required to fulfill the intent. 
+Lastly, you will provide the business logic necessary to execute the action. 
+And Amazon Chat Box can be created both via console and rest API S. 
+Now, let's go over the basic workflow of Amazon Lex in which there is simple four stage process. 
+First, you save the current state of your bar even if it is not ready for prime time. 
+Next you build the NLM or natural language model, which is what your bot will use to interact with customers. 
+This will also create versioning for your intents and slots. 
+This is followed by test where you will have the chat interface right on the console, allowing quick iteration and updating. 
+Finally moving forward to publishing where a new version of your bot and its alias is created and pushed to your clients. 
+Amazon Lex allows you to easily publish your bot to chat services directly from the Amazon Lex console. 
+Reducing multi platform development efforts rich formatting capabilities to provide an intuitive user experience tailored to chat platforms like Facebook, messenger, slack and tw us. MS. 
+Amazon Lex is also integrated into Aws mobile hub. So you can quickly build your own mobile app to access your Amazon Lex chatbot to track the health of your Amazon lax bots use Amazon cloudwatch with cloudwatch. 
+You can get matrix for individual Amazon lax operations and for global Amazon lax operations for your account. 
+You can also set up cloudwatch alarms to be notified when one or more matrix succeed a threshold that you define. 
+For example, you can monitor the number of requests made to a bot over a particular time period. 
+View the latency of a successful request or raise an alarm when errors exceed a threshold before wrapping up. 
+Let's take a look at some common use cases. This will help give you a concrete understanding of how Amazon Lex can be used. 
+Amazon Lex can be used with other Aws services to power a call center bot. 
+In this scenario, a customer calls a customer service line to reschedule an appointment. 
+Amazon connect then calls Amazon Lex and Aws Lambda calls a database to look up the customer information by phone. 
+When the customer asks a scheduling question, Amazon Lamda is triggered to summon the customer scheduling software. 
+Once a new appointment date is confirmed, Amazon connect sends a confirmation message via S MS to the customer. 
+You can also use Amazon Lex to build chatbots for everyday customer requests such as accessing the latest news updates, game scores, weather and more. 
+Let's take an example of a patient requesting an appointment at a medical facility. 
+After the patient requests the appointment. Amazon Lex recognizes the appointment request and asks the patient for his or her preferred appointment date and time the appointment time is then received and confirmation is sent to the patient via text message or email. 
+One final use case we will discuss is using Amazon Lex to build enterprise chat bots that streamline common work activities and improve organizational efficiencies. 
+For example, employees can check sales or marketing data from hubspot. Amazon Lex then recognizes the request and connects to hubspot for the data. 
+Finally, Amazon lacks the responses to the sales rep with the requested data. In summary, Amazon Lex is a service for building conversational interfaces into any application using voice and text. 
+Amazon Lex democratizes deep learning technologies for speech recognition and natural language understanding by putting the power of Amazon Alexa within reach of all developers. I hope you learn a little something and will continue to explore other courses.
