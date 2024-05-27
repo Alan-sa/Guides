@@ -1,0 +1,79 @@
+# .swiftlint.yml
+disabled_rules: # rule identifiers to exclude from running
+  - trailing_whitespace
+  - todo
+
+opt_in_rules: # some rules are only opt-in
+  - empty_count
+  - missing_docs
+  - unused_import
+  - array_init
+  - closure_end_indentation
+
+included: # paths to include during linting. Adjust it as needed.
+  - Sources
+  - Tests
+
+excluded: # paths to ignore during linting. Adjust it as needed.
+  - Carthage
+  - Pods
+  - Sources/Externals
+  - Sources/Generated
+
+# configurable rules can be customized from this configuration
+line_length:
+  warning: 120
+  error: 150
+
+type_body_length:
+  warning: 300
+  error: 400
+
+function_body_length:
+  warning: 50
+  error: 75
+
+file_length:
+  warning: 500
+  error: 800
+
+cyclomatic_complexity:
+  warning: 10
+  error: 15
+
+identifier_name:
+  min_length: 3
+  max_length:
+    warning: 40
+    error: 50
+
+# force tries should be avoided in production code
+force_try:
+  severity: error
+
+# force unwrapping is a bad practice
+force_unwrapping:
+  severity: warning
+
+# this ensures you don't have too many code blocks in a single closure
+closure_parameter_position:
+  severity: warning
+
+# mark todos and fixmes as warnings to remind developers
+todo:
+  severity: warning
+fixme:
+  severity: warning
+
+# requires marks for large classes
+mark:
+  severity: warning
+
+# ensures consistent spacing after commas
+comma:
+  severity: warning
+
+# prohibits the use of deprecated functions
+deprecation:
+  severity: error
+# You can enable and configure more rules depending on your team's consensus and coding guidelines.
